@@ -33,16 +33,16 @@ steps:
     configuration: '$(buildConfiguration)'
     
 - task: FortifyOnDemandStatic@8
-    inputs:
-      FortifyProjects: 'grrdrdntr/Rep4ADO'
-      FodConnection: 'test'
-      ReleaseOptions: '0'
-      ReleaseId: 946728
-      EntitlementSelection: '1'
-      EntitlementPreference: '1'
-      OverrideScanSettings: '2'
-      InProgressScanActionType: '2'
-      RemediationScanPreference: '2'
-      BuildType: 'none'
-      PollingInterval: '0'
-      PolicyFailAction: '0'
+  inputs:
+    FortifyProjects: 'grrdrdntr/Rep4ADO'
+    FodConnection: 'test'
+    ReleaseOptions: '0'
+    ReleaseId: 946728
+    EntitlementSelection: '1'
+    EntitlementPreference: '1'
+    OverrideScanSettings: '2'
+    InProgressScanActionType: '2'
+    RemediationScanPreference: '2'
+    BuildType: 'none'
+    PollingInterval: 0
+    PolicyFailAction: '0'
