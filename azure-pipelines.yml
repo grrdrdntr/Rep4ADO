@@ -37,7 +37,7 @@ steps:
     InProgressScanActionType: '2'
     RemediationScanPreference: '2'
     BuildType: 'none'
-    PollingInterval: 
+    PollingInterval: 0
     PolicyFailAction: '0'
 - task: VSBuild@1
   inputs:
