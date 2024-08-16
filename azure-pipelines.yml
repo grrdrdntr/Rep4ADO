@@ -20,12 +20,15 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
+    
 - task: FortifyOnDemandStatic@9
   inputs:
     FortifyProjects: 'grrdrdntr/Rep4ADO'
     FodConnection: 'RRTA Connection'
     ReleaseOptions: '2'
-    ApplicationAttributes: 'UAT 24.2'
+    ApplicationName: 'UAT 24.2'
+    BusinessCriticality: '1'
+    ApplicationAttributes: 'nn_group test'
     ApplicationType: '2'
     ReleaseName: 'ADO'
     Owner: 97077
@@ -37,30 +40,3 @@ steps:
     InProgressScanActionType: '2'
     RemediationScanPreference: '2'
     BuildType: 'none'
-    PollingInterval: 0
-    PolicyFailAction: '0'
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    
-- task: FortifyOnDemandStatic@8
-  inputs:
-    FortifyProjects: 'grrdrdntr/Rep4ADO'
-    FodConnection: 'RRTA Connection'
-    ReleaseOptions: '0'
-    ReleaseId: 971016
-    EntitlementSelection: '1'
-    EntitlementPreference: '1'
-    OverrideScanSettings: '2'
-    InProgressScanActionType: '2'
-    RemediationScanPreference: '2'
-    BuildType: 'none'
-    PollingInterval: 0
-    PolicyFailAction: '0'
