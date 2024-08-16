@@ -20,7 +20,25 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-
+- task: FortifyOnDemandStatic@9
+  inputs:
+    FortifyProjects: 'grrdrdntr/Rep4ADO'
+    FodConnection: 'RRTA Connection'
+    ReleaseOptions: '2'
+    ApplicationAttributes: 'UAT 24.2'
+    ApplicationType: '2'
+    ReleaseName: 'ADO'
+    Owner: 97077
+    EntitlementSelection: '0'
+    Entitlement: 12631
+    EntitlementPreference: '1'
+    OverrideScanSettings: '1'
+    AssessmentTypeId: '271'
+    InProgressScanActionType: '2'
+    RemediationScanPreference: '2'
+    BuildType: 'none'
+    PollingInterval: 
+    PolicyFailAction: '0'
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
