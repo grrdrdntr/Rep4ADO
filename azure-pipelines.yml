@@ -28,7 +28,6 @@ steps:
     ReleaseOptions: '2'
     ApplicationName: 'UAT 24.2'
     BusinessCriticality: '1'
-    ApplicationAttributes: 'nn_group test'
     ApplicationType: '2'
     ReleaseName: 'ADO'
     Owner: 97077
