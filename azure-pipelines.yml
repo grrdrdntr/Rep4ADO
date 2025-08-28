@@ -20,7 +20,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-    
+
 - task: FortifyOnDemandStatic@9
   inputs:
     FortifyProjects: 'grrdrdntr/Rep4ADO'
@@ -40,3 +40,13 @@ steps:
     InProgressScanActionType: '2'
     RemediationScanPreference: '2'
     BuildType: 'none'
+- task: FortifyDASTAutomated@2
+  inputs:
+    FodConnection: 'KyraTest'
+    ReleaseOptions: '0'
+    ReleaseId: 170611
+    AssessmentTypeId: 149
+    EntitlementId: 3556
+    EntitlementFrequencyType: 'Subscription'
+    OverrideScanSettings: '2'
+    PolicyFailAction: '0'
