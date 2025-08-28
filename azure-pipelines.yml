@@ -40,6 +40,7 @@ steps:
     InProgressScanActionType: '2'
     RemediationScanPreference: '2'
     BuildType: 'none'
+    PolicyFailAction: '0'
 - task: FortifyDASTAutomated@2
   inputs:
     FodConnection: 'KyraTest'
